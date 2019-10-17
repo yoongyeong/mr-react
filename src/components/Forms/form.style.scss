@@ -1,5 +1,7 @@
 @import "../base.style.scss";
+@import "../../components/Layout/layout.style";
 @import "../typography.style.scss";
+@import "./FormContainer/form-container.style.scss";
 
 .form {
   grid-column: form-start/form-end;

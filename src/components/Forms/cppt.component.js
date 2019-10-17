@@ -3,14 +3,12 @@ import Wrapper from "../../HOC/wrapper.component";
 
 import "./cppt.style.scss";
 
-console.log("public url:" + process.env.PUBLIC_URL);
-
 const Cppt = () => {
   return (
     <Wrapper>
       <div className="cppt-card">
         <img
-          src="\public\asset\img\alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg"
+          src={require("../../asset/img/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg")}
           alt=""
           className="img sh-sf"
         />
@@ -47,7 +45,7 @@ const Cppt = () => {
             <div className="need-verification">
               <i className="icon fas fa-exclamation-circle fa-1g"></i>
               <span className="need-verification__text">
-                Need Verification.
+                Need Verification.&nbsp;
               </span>
               <a href="#" className="link">
                 Please Verify

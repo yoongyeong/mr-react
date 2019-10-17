@@ -1,15 +1,14 @@
-import React, {Component} from 'react';
-import Layout from "./components/Layout/Layout";
-import Form from "./components/Forms/Form";
-import './App.css';
+import React from "react";
+import Layout from "./components/Layout/layout.component";
+import FormContainer from "./components/Forms/FormContainer/form-container.component";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Layout>
-        <Form/>
+        <FormContainer />
       </Layout>
-    
     </div>
   );
 }

@@ -5,7 +5,10 @@
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "devextreme": "19.1-stable",
+    "devextreme-themebuilder": "19.1-stable",
+    "devextreme-react": "19.1-stable"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,6 @@
-.workspace {
+.form-container {
   display: grid;
+  background-color: teal;
   grid-template-columns: [form-start] minmax(67.4rem, 1fr) [form-end widget-start] 27.2rem [widget-end];
   gap: 0.8rem;
   padding: 0.8rem;

@@ -6,8 +6,8 @@ import "./CPPT.scss";
 const Cppt = () => {
   return (
     <div className="cppt-card">
-      {/* <img
-        src={require("../../asset/img/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg")}
+      <img
+        // src={require("../../asset/img/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg")}
         alt=""
         className="img sh-sf"
       />
@@ -52,7 +52,7 @@ const Cppt = () => {
           </div>
         </div>
         <p className="soap-end p-sm">End of CPPT</p>
-      </div> */}
+      </div>
     </div>
   );
 };

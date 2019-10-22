@@ -11,18 +11,10 @@ class Form extends Component {
   constructor(props) {
     super(props);
 
-    this.formList = JSON.parse(data);
+    this.forms = data.formList;
 
-    // this.state = data.getData();
-
-    // this.formList = [];
-
-    // Object.keys(data).forEach(key => {
-    //   this.formList.push(data[key]);
-    // });
-
-    const handlerComponent = form => {
-      let id = form.id;
+    this.handleComponent = formContent => {
+      let id = formContent.id;
       switch (id) {
         case "1":
           return <CPPT></CPPT>;
@@ -43,8 +35,8 @@ class Form extends Component {
   render() {
     return (
       <div className="form">
-        {/* {this.formList.map((form, index) => (
-          <div key={index}>
+        {this.forms.map(form => (
+          <div key={form.id}>
             <button
               className={
                 "form__" +
@@ -52,7 +44,7 @@ class Form extends Component {
                 " accordion-header heading-2 sh-sf rad-top-5 rad-bot-5 pad-bot-8"
               }
             >
-              {form.title[index]}
+              {form.title}
               <span className="heading-2 heading-2--blue">
                 <span>
                   {form.info !== null ? " - " : " " + form.notification}
@@ -64,32 +56,19 @@ class Form extends Component {
             <div className="form-content">
               <div
                 className={
-                  "accordion-container form__" +
+                  "accordion-container form-" +
                   form.classExtension +
                   "__content sh-sf rad-bot-5"
                 }
               >
+                {this.handleComponent(form)}
               </div>
             </div>
           </div>
-        ))} */}
-
-        {this.formList.map(item => console.log(item.id))}
+        ))}
       </div>
     );
   }
 }
 
 export default Form;
-
-// const FormTitle = () => {
-//   const formList = [];
-
-//   Object.keys(data, formList).forEach(key => {
-//     formList.push(data[key]);
-//   });
-
-//   return console.log(formList);
-// };
-
-// export default FormTitle;

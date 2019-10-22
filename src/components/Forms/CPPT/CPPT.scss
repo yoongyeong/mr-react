@@ -2,13 +2,35 @@
 @import "../../typography.style.scss";
 
 .cppt {
+  // display: grid;
+  // grid-template-columns: 1fr;
+
+  &-end {
+    grid-column: 1/-1;
+    display: flex;
+    margin: 0.8rem;
+    justify-content: center;
+    color: $color-black;
+
+    &::before,
+    &::after {
+      background-color: $color-grey-darker;
+      height: 2px;
+      width: 3.6rem;
+      margin: 0.8rem;
+      content: "";
+    }
+  }
+
   &-card {
     margin: 0.8rem;
+    // margin-bottom: 3.2rem;
     display: grid;
     grid-template-columns: 4.8rem 1fr;
     gap: 0.8rem;
 
     .img {
+      background-color: salmon;
       width: 4.8rem;
       height: 4.8rem;
       object-fit: cover;
@@ -43,23 +65,6 @@
 
       .align-r {
         text-align: right;
-      }
-
-      &-end {
-        grid-column: 1/-1;
-        display: flex;
-        margin: 0.8rem;
-        justify-content: center;
-        color: $color-black;
-
-        &::before,
-        &::after {
-          background-color: $color-grey-darker;
-          height: 2px;
-          width: 3.6rem;
-          margin: 0.8rem;
-          content: "";
-        }
       }
 
       .need-verification {

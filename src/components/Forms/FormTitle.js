@@ -7,13 +7,13 @@ import "./FormTitle.scss";
 
 var data = require("../data.json");
 
-class Form extends Component {
+class FormDx extends Component {
   constructor(props) {
     super(props);
 
     this.forms = data.formList;
 
-    this.handleItem = formContent => {
+    this.handleComponent = formContent => {
       let id = formContent.id;
       switch (id) {
         case "1":
@@ -61,7 +61,7 @@ class Form extends Component {
                   "__content sh-sf rad-bot-5"
                 }
               >
-                {this.handleItem(form)}
+                {this.handleComponent(form)}
               </div>
             </div>
           </div>
@@ -71,4 +71,4 @@ class Form extends Component {
   }
 }
 
-export default Form;
+export default FormDx;

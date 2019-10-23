@@ -1,0 +1,99 @@
+@import "../../base.style.scss";
+@import "../../typography.style.scss";
+
+.cppt {
+  // display: grid;
+  // grid-template-columns: 1fr;
+
+  &-end {
+    grid-column: 1/-1;
+    position: absolute;
+    display: flex;
+    margin: 1.2rem;
+    left: 40%;
+    color: $color-black;
+
+    &::before,
+    &::after {
+      background-color: $color-grey-darker;
+      height: 2px;
+      width: 3.6rem;
+      margin: 0.8rem;
+      content: "";
+    }
+  }
+
+  &-card {
+    margin: 0.8rem;
+    // margin-bottom: 3.2rem;
+    display: grid;
+    grid-template-columns: 4.8rem 1fr;
+    gap: 0.8rem;
+
+    .img {
+      background-color: salmon;
+      width: 4.8rem;
+      height: 4.8rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    &__content {
+      display: block;
+
+      &-header {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+
+        .time {
+          // grid-column: 2/-1;
+          justify-self: flex-end;
+          margin-right: 0.8rem;
+        }
+      }
+    }
+
+    .soap {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: 2rem 1fr;
+      gap: 0.8rem;
+      row-gap: 0.4rem;
+      padding: 0.8rem 1.2rem 1.2rem 0.8rem;
+      border-radius: 0 1.5rem 1.5rem 1.5rem;
+      margin-top: 0.8rem;
+      background-color: white;
+
+      .align-r {
+        text-align: right;
+      }
+
+      .need-verification {
+        grid-column: 2/-1;
+        font-weight: 700;
+        color: red;
+        text-align: right;
+        margin-top: 0.8rem;
+        font-family: $font-primary;
+
+        .icon {
+          font-size: 1.6rem;
+          padding: 0 0.4rem;
+        }
+      }
+      .verified {
+        grid-column: 2/-1;
+        font-weight: 700;
+        color: green;
+        text-align: right;
+        margin-top: 0.8rem;
+        font-family: $font-primary;
+
+        .icon {
+          font-size: 1.6rem;
+          padding: 0 0.4rem;
+        }
+      }
+    }
+  }
+}

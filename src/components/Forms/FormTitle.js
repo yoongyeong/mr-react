@@ -7,7 +7,7 @@ import "./FormTitle.scss";
 
 var data = require("../data.json");
 
-class FormDx extends Component {
+class Form extends Component {
   constructor(props) {
     super(props);
 
@@ -71,4 +71,4 @@ class FormDx extends Component {
   }
 }
 
-export default FormDx;
+export default Form;

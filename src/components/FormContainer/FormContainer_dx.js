@@ -5,7 +5,7 @@ import FormItem from "../Forms-dx/FormContent";
 import data from "../data";
 import "./FormContainer.scss";
 
-class formContainerDx extends Component {
+class FormContainer_dx extends Component {
   constructor(props) {
     super(props);
 
@@ -62,4 +62,4 @@ class formContainerDx extends Component {
   }
 }
 
-export default formContainerDx;
+export default FormContainer_dx;

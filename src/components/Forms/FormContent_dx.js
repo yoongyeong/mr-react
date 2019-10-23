@@ -1,6 +1,6 @@
 import React from "react";
 
-const formContent = data => {
+const FormContent_dx = data => {
   return (
     <div
       className={
@@ -14,4 +14,4 @@ const formContent = data => {
   );
 };
 
-export default formContent;
+export default FormContent_dx;

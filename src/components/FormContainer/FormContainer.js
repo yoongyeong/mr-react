@@ -2,7 +2,7 @@ import React from "react";
 import Form from "../Forms/FormTitle";
 import "./FormContainer.scss";
 
-const formContainer = () => {
+const FormContainer = () => {
   return (
     <div className="form-container">
       <Form></Form>
@@ -10,4 +10,4 @@ const formContainer = () => {
   );
 };
 
-export default formContainer;
+export default FormContainer;

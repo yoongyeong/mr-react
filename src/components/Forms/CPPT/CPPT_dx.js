@@ -31,7 +31,7 @@ const handleVerification = cpptContent => {
   }
 };
 
-const Cppt = () => {
+const Cppt_dx = () => {
   let cpptContent = data.cpptContent;
 
   return (
@@ -75,4 +75,4 @@ const Cppt = () => {
   );
 };
 
-export default Cppt;
+export default Cppt_dx;

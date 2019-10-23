@@ -46,7 +46,7 @@
         "A": "Tu autem, si tibi illa probabantur, cur non propriis verbis ea tenebas? Ita multa dicunt, quae vix intellegam. At ego quem huic anteponam non audeo dicere; Ita graviter et severe voluptatem secrevit a bono.",
         "P": "Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia."
       },
-      "needVerification": "Yes"
+      "verified": "No"
     },
     {
       "id": "2",
@@ -59,7 +59,7 @@
         "A": "Portenta haec esse dicit, neque ea ratione ullo modo posse vivi; Duo Reges: constructio interrete.",
         "P": "Et hunc idem dico, inquieta sed ad virtutes et ad vitia nihil interesse. Primum cur ista res digna odio est, nisi quod est turpis."
       },
-      "needVerification": "No"
+      "verified": "No"
     },
     {
       "id": "3",
@@ -72,7 +72,7 @@
         "A": "Itaque hic ipse iam pridem est reiectus; Inde sermone vario sex illa a Dipylo stadia confecimus. ",
         "P": "Qui enim voluptatem ipsam contemnunt, iis licet dicere se acupenserem maenae non anteponere. Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant."
       },
-      "needVerification": "Yes"
+      "verified": "Yes"
     },
     {
       "id": "4",
@@ -85,7 +85,7 @@
         "A": "eatus sibi videtur esse moriens.",
         "P": "Cato, dicere aliquid vis aut nos iam longiores sumus."
       },
-      "needVerification": "No"
+      "verified": "No"
     }
   ]
 }

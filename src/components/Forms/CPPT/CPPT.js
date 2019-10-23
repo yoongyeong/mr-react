@@ -4,13 +4,41 @@ import data from "../../data.json";
 
 import "./CPPT.scss";
 
+const handleVerification = cpptContent => {
+  // const needVerification = needVerification;
+  switch (cpptContent.verified) {
+    case "Yes":
+      return (
+        <div className="verified">
+          <i className="icon fas fa-check-circle fa-1g"></i>
+          <span className="verified__text">Verified.&nbsp;</span>
+        </div>
+      );
+      break;
+    case "No":
+      return (
+        <div className="need-verification">
+          <i className="icon fas fa-exclamation-circle fa-1g"></i>
+          <span className="need-verification__text">
+            Need Verification.&nbsp;
+          </span>
+          <a href="#" className="link">
+            Please Verify
+          </a>
+        </div>
+      );
+      break;
+  }
+  // console.log(cpptContent.needVerification);
+};
+
 const Cppt = () => {
   let cpptContent = data.cpptContent;
+
   return (
     <Wrapper key={"cppt"}>
       {cpptContent.map((cppt, index) => (
         <div className="cppt-card" key={"cppt_" + cppt.id}>
-          {/* {console.log(cpptContent[0].name)} */}
           <img
             src={require("../../../asset/img/user/nurse/alexandru-zdrobau-BGz8vO3pK8k-unsplash.jpg")}
             alt=""
@@ -34,15 +62,7 @@ const Cppt = () => {
               <span className="soap-p heading-5 align-r">P : </span>
               <p className="soap-p__content">{cppt.SOAP.P}</p>
 
-              <div className="need-verification">
-                <i className="icon fas fa-exclamation-circle fa-1g"></i>
-                <span className="need-verification__text">
-                  Need Verification.&nbsp;
-                </span>
-                <a href="#" className="link">
-                  Please Verify
-                </a>
-              </div>
+              {handleVerification(cppt)}
             </div>
             {index === cpptContent.length - 1 ? (
               <p className="cppt-end p-sm">End of CPPT</p>

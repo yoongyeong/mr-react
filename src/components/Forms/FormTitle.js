@@ -13,7 +13,7 @@ class Form extends Component {
 
     this.forms = data.formList;
 
-    this.handleComponent = formContent => {
+    this.handleItem = formContent => {
       let id = formContent.id;
       switch (id) {
         case "1":
@@ -61,7 +61,7 @@ class Form extends Component {
                   "__content sh-sf rad-bot-5"
                 }
               >
-                {this.handleComponent(form)}
+                {this.handleItem(form)}
               </div>
             </div>
           </div>

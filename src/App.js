@@ -3,7 +3,8 @@ import "devextreme/dist/css/dx.light.css";
 
 import React from "react";
 import Layout from "./components/Layout/Layout";
-import FormContainer from "./components/FormContainer/FormContainer";
+// import FormContainer from "./components/FormContainer/FormContainer";
+import FormContainer_dx from "./components/FormContainer/FormContainer_dx";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
 
@@ -15,7 +16,7 @@ function App() {
       <Layout className="container">
         <Sidebar />
         <Header />
-        <FormContainer />
+        <FormContainer_dx />
       </Layout>
     </div>
   );

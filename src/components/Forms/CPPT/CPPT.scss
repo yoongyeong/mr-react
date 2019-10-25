@@ -2,16 +2,16 @@
 @import "../../typography.style.scss";
 
 .cppt {
-  // display: grid;
-  // grid-template-columns: 1fr;
-
+  display: grid;
+  row-gap: 1.6rem;
   &-end {
     grid-column: 1/-1;
-    position: absolute;
+    justify-content: center;
+    // position: absolute;
     display: flex;
-    margin: 1.2rem;
-    left: 40%;
-    color: $color-black;
+    margin-top: 1.2rem;
+    // left: 40%;
+    // color: $color-black;
 
     &::before,
     &::after {
@@ -25,7 +25,6 @@
 
   &-card {
     margin: 0.8rem;
-    // margin-bottom: 3.2rem;
     display: grid;
     grid-template-columns: 4.8rem 1fr;
     gap: 0.8rem;
@@ -38,17 +37,42 @@
       border-radius: 50%;
     }
 
+    &__footer {
+      display: inline-block;
+      align-items: left;
+
+      &:last-child {
+        justify-self: right;
+        color: black;
+      }
+    }
+
     &__content {
       display: block;
 
       &-header {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
+        // display: grid;
+        // grid-template-columns: 3fr 1fr;
+        display: block;
+
+        .ppa-nama {
+          display: inline-block;
+        }
 
         .time {
           // grid-column: 2/-1;
-          justify-self: flex-end;
-          margin-right: 0.8rem;
+          // justify-self: flex-end;
+
+          display: inline-block;
+          font-style: $font-secondary;
+          font-size: 1.2rem;
+
+          &::before {
+            content: "•";
+
+            margin: 0.8rem;
+            color: $color-grey-darker;
+          }
         }
       }
     }

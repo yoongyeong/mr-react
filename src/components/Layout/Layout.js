@@ -5,7 +5,6 @@ import "./Layout.scss";
 const layout = props => {
   return (
     <Wrapper>
-      <div>"this is from Layout component"</div>
       <main className="container">{props.children}</main>
     </Wrapper>
   );

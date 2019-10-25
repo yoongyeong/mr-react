@@ -34,9 +34,9 @@ class Form extends Component {
 
   render() {
     return (
-      <div className="form">
+      <Wrapper>
         {this.forms.map(form => (
-          <div key={form.id}>
+          <div key={form.id} className="form">
             <button
               className={
                 "form__" +
@@ -46,9 +46,7 @@ class Form extends Component {
             >
               {form.title}
               <span className="heading-2 heading-2--blue">
-                <span>
-                  {form.info !== null ? " - " : " " + form.notification}
-                </span>
+                {form.info !== null ? " - " : " " + form.notification}
                 {form.info}
               </span>
               <i className="icon fa fa-chevron-down"></i>
@@ -66,7 +64,7 @@ class Form extends Component {
             </div>
           </div>
         ))}
-      </div>
+      </Wrapper>
     );
   }
 }

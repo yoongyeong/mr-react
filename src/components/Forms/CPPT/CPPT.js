@@ -1,6 +1,11 @@
 import React from "react";
 import Wrapper from "../../../HOC/wrapper.component";
 import data from "../../data.json";
+import helper from "../../../Helper/Helper";
+import Fab from "@material-ui/core/Fab";
+import { ButtonWithIconAndLabels as ButtonCatatan } from "../../Button/Button";
+import IconButton from "@material-ui/core/IconButton";
+import Search from "@material-ui/icons/Search";
 
 import "./CPPT.scss";
 
@@ -31,11 +36,11 @@ const handleVerification = cpptContent => {
   }
 };
 
-const CpptDx = () => {
+const Cppt = () => {
   let cpptContent = data.cpptContent;
 
   return (
-    <Wrapper key={"cppt"}>
+    <div className="cppt" key={"cppt"}>
       {cpptContent.map((cppt, index) => (
         <div className="cppt-card" key={"cppt_" + cppt.id}>
           <img
@@ -45,11 +50,11 @@ const CpptDx = () => {
           />
           <div className="cppt-card__content">
             <div className="cppt-card__content-header">
-              <div>
-                <h5 className="ppa-nama heading-5">{cppt.name}</h5>
-                <p className="ppa-work-title p-sm">{cppt.workTitle}</p>
-              </div>
-              <p className="time p-sm">{Date(cppt.date)}</p>
+              <h5 className="ppa-nama heading-5">{cppt.name}</h5>
+              <p className="time p-sm">
+                {helper.handleDate(new Date(cppt.postingDate))}
+              </p>
+              <p className="ppa-work-title p-sm">{cppt.workTitle}</p>
             </div>
             <div className="soap sh-sf">
               <span className="soap-s heading-5 align-r">S : </span>
@@ -71,8 +76,14 @@ const CpptDx = () => {
           </div>
         </div>
       ))}
-    </Wrapper>
+      <div className="cppt-card__footer">
+        <IconButton>
+          <Search />
+        </IconButton>
+        <ButtonCatatan className="btn-catatan" text="Tambah Catatan" />
+      </div>
+    </div>
   );
 };
 
-export default CpptDx;
+export default Cppt;

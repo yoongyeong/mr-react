@@ -1,0 +1,14 @@
+@import "../base.style.scss";
+
+.form {
+  grid-column: form-start/form-end;
+  background-color: rosybrown;
+
+  &-cppt {
+    &__content {
+      display: grid;
+      // grid-template-rows: 1fr;
+      row-gap: 2rem;
+    }
+  }
+}

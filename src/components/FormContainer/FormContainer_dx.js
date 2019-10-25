@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import { Accordion } from "devextreme-react";
-import FormTitle from "../Forms-dx/FormTitle";
-import FormItem from "../Forms-dx/FormContent";
-import data from "../data";
-import "./FormContainer.scss";
+import FormTitle from "../Forms/FormTitle_dx";
+import CPPT from "../Forms/CPPT/CPPT";
+import data from "../data.json";
+import "./FormContainer_dx.scss";
 
 class FormContainer_dx extends Component {
   constructor(props) {
     super(props);
 
-    this.formList = data.getFormList();
+    this.formList = data.formList;
 
     this.state = {
       selectedItems: [this.formList[0]],
@@ -18,6 +18,24 @@ class FormContainer_dx extends Component {
       animationDuration: 300
     };
     this.selectionChanged = this.selectionChanged.bind(this);
+
+    this.handleComponent = formContent => {
+      let id = formContent.id;
+      switch (id) {
+        case "1":
+          return <CPPT></CPPT>;
+          break;
+        case "2":
+          return "assessment perawat";
+          break;
+        case "3":
+          return "assessment dokter";
+          break;
+        case "4":
+          return "pengkajian tambahan";
+          break;
+      }
+    };
   }
 
   selectionChanged(e) {
@@ -37,23 +55,19 @@ class FormContainer_dx extends Component {
   }
 
   render() {
-    const {
-      selectedItems,
-      multiple,
-      collapsible,
-      animationDuration
-    } = this.state;
+    const { selectedItems, multiple } = this.state;
     return (
-      <div className="form-container accordion">
+      <div className="form-container">
         <Accordion
+          // id="accordion"
           dataSource={this.formList}
           collapsible={true}
           multiple={multiple}
-          animationDuration={150}
+          animationDuration={300}
           selectedItems={selectedItems}
           onSelectionChanged={this.selectionChanged}
           itemTitleRender={FormTitle}
-          itemRender={FormItem}
+          itemRender={this.handleComponent}
         />
         {/* <Form></Form> */}
         {/* {console.log(this.formList)} */}

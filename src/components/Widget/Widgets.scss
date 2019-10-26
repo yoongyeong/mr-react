@@ -1,0 +1,6 @@
+@import "../base.style.scss";
+
+.widget {
+	display: block;
+	grid-column: widget-start / widget-end;
+}

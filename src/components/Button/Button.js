@@ -32,8 +32,9 @@ const ButtonWithIconAndLabels = (props, classes) => {
     <ThemeProvider theme={theme}>
       <Button
         variant="text"
-        className={props}
+        className={classes}
         color="primary"
+        size="large"
         startIcon={<PostAdd />}
       >
         {text}
@@ -182,4 +183,4 @@ const ButtonWithIconAndLabels = (props, classes) => {
 //   );
 // }
 
-export { ButtonWithIconAndLabels };
+export { ButtonWithIconAndLabels, theme };

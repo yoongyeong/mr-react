@@ -1,0 +1,9 @@
+@import "../base.style.scss";
+
+.workspace {
+	display: grid;
+	background-color: $color-grey-dark;
+	grid-template-columns: [form-start] minmax(65rem, 1fr) [form-end widget-start] 27.2rem [widget-end];
+	gap: 0.8rem;
+	padding: 0.8rem;
+}

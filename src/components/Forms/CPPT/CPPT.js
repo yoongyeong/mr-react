@@ -1,8 +1,6 @@
 import React from "react";
-import Wrapper from "../../../HOC/wrapper.component";
 import data from "../../data.json";
-import helper from "../../../Helper/Helper";
-import Fab from "@material-ui/core/Fab";
+import { handlePostingDate } from "../../../Helper/Helper";
 import { ButtonWithIconAndLabels as ButtonCatatan } from "../../Button/Button";
 import IconButton from "@material-ui/core/IconButton";
 import Search from "@material-ui/icons/SearchRounded";
@@ -50,7 +48,7 @@ const Cppt = () => {
 					<div className="cppt-card__content">
 						<div className="cppt-card__content-header">
 							<h5 className="ppa-nama heading-5">{cppt.name}</h5>
-							<p className="time p-sm">{helper.handleDate(new Date(cppt.postingDate))}</p>
+							<p className="time p-sm">{handlePostingDate(new Date(cppt.postingDate))}</p>
 							<p className="ppa-work-title p-sm">{cppt.workTitle}</p>
 						</div>
 						<div className="soap sh-sf">
@@ -71,15 +69,15 @@ const Cppt = () => {
 			))}
 			<div className="cppt-card__footer sh-sf">
 				<div>
-					<IconButton>
+					<IconButton size="medium">
 						<Search />
 					</IconButton>
-					<IconButton>
+					<IconButton size="medium">
 						<FilterListRounded />
 					</IconButton>
 				</div>
 				<div className="btn">
-					<ButtonCatatan text="Tambah Catatan" />
+					<ButtonCatatan text="Tambah Catatan" variant="text" />
 				</div>
 			</div>
 		</div>

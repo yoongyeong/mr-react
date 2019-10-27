@@ -13,34 +13,41 @@ import PostAdd from "@material-ui/icons/PostAdd";
 // }));
 
 const theme = createMuiTheme({
-  typography: {
-    htmlFontSize: 10,
+	typography: {
+		htmlFontSize: 10,
 
-    button: {
-      fontFamily: "Open Sans",
-      fontWeight: 700
-    }
-  },
-  palette: {
-    primary: { 500: "#4285F4" }
-  }
+		button: {
+			fontFamily: "Open Sans",
+			fontWeight: 700
+		}
+	},
+	palette: {
+		primary: { 500: "#4285F4" }
+	}
 });
 
-const ButtonWithIconAndLabels = (props, classes) => {
-  const { text } = props;
-  return (
-    <ThemeProvider theme={theme}>
-      <Button
-        variant="text"
-        className={classes}
-        color="primary"
-        size="large"
-        startIcon={<PostAdd />}
-      >
-        {text}
-      </Button>
-    </ThemeProvider>
-  );
+const ButtonWithIconAndLabels = props => {
+	const text = props.text;
+	const variant = props.variant.toString().toLowerCase();
+	const classes = props.classes;
+
+	if (variant == "text" || variant == "outlined" || variant == "contained") {
+		return (
+			<ThemeProvider theme={theme}>
+				<Button variant={variant} className={classes} color="primary" size="large" startIcon={<PostAdd />}>
+					{text}
+				</Button>
+			</ThemeProvider>
+		);
+	} else {
+		return (
+			<ThemeProvider theme={theme}>
+				<Button variant="text" className={classes} color="primary" size="large" startIcon={<PostAdd />}>
+					{text}
+				</Button>
+			</ThemeProvider>
+		);
+	}
 };
 
 // const IconButton = ()

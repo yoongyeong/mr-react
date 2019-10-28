@@ -1,0 +1,38 @@
+@import "../base.style.scss";
+
+.workspace-header {
+  grid-column: 1/-1;
+  margin-bottom: 1rem;
+
+  .top {
+    margin: 0 1rem 1rem 1rem;
+    .todays-date {
+      display: inline-block;
+      vertical-align: middle;
+
+      .date {
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      .time {
+        &::before {
+          content: "|";
+          margin: 0 0.8rem;
+        }
+      }
+    }
+    .breadcrumbs {
+      float: right;
+      margin: auto;
+    }
+  }
+  .bottom {
+    .workspace-title {
+      display: inline-block;
+    }
+    .btn {
+      float: right;
+    }
+  }
+}

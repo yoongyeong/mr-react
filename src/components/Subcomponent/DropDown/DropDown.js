@@ -1,61 +1,41 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import InputLabel from "@material-ui/core/InputLabel";
-import FormHelperText from "@material-ui/core/FormHelperText";
-import FormControl from "@material-ui/core/FormControl";
-import Select from "@material-ui/core/Select";
-import NativeSelect from "@material-ui/core/NativeSelect";
+import { DropDownButton, Toolbar } from "devextreme-react";
+import service from "./data.js";
+import notify from "devextreme/ui/notify";
+import "whatwg-fetch";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    flexWrap: "wrap"
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2)
-  }
-}));
+import "./DropDown.scss";
 
-const DropDown = () => {
-  const classes = useStyles();
-  const [state, setState] = React.useState({
-    age: "",
-    name: "hai"
-  });
-
-  const inputLabel = React.useRef(600);
-  const [labelWidth, setLabelWidth] = React.useState(0);
-  React.useEffect(() => {
-    setLabelWidth(inputLabel.current.offsetWidth);
-  }, []);
-
-  const handleChange = name => event => {
-    setState({
-      ...state,
-      [name]: event.target.value
-    });
-  };
-
-  return (
-    <FormControl className={classes.formControl}>
-      <NativeSelect
-        value={state.age}
-        onChange={handleChange("age")}
-        name="age"
-        className={classes.selectEmpty}
-        inputProps={{ "aria-label": "age" }}
-      >
-        <option value="">None</option>
-        <option value={10}>Ten</option>
-        <option value={20}>Twenty</option>
-        <option value={30}>Thirty</option>
-      </NativeSelect>
-    </FormControl>
-  );
+const onButtonClick = e => {
+	notify(`Go to ${e.component.option("text")}'s profile`, "success", 600);
 };
 
-export { DropDown };
+const onItemClick = e => {
+	notify(e.itemData.name || e.itemData, "success", 600);
+};
+
+const DropDown = props => {
+	const data = service.getData();
+	const text = props.text;
+	const icon = props.icon;
+	const item = props.item;
+	const id = props.id;
+	const displayExpr = props.displayExpr;
+
+	return (
+		<div>
+			<DropDownButton
+				useSelectMode={false}
+				text={text}
+				icon={icon}
+				items={item}
+				displayExpr={displayExpr}
+				keyExpr={id}
+				onButtonClick={onButtonClick}
+				onItemClick={onItemClick}
+			/>
+		</div>
+	);
+};
+
+export default DropDown;

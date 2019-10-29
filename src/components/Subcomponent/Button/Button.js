@@ -47,7 +47,7 @@ const ButtonCustom = props => {
   const startIcon = props.startIcon;
   const priority = props.priority;
 
-  if (priority == "primary") {
+  if (priority === "primary") {
     return (
       <ThemeProvider theme={primaryBtn}>
         <Button
@@ -61,7 +61,7 @@ const ButtonCustom = props => {
         </Button>
       </ThemeProvider>
     );
-  } else if (priority == "secondary") {
+  } else if (priority === "secondary") {
     return (
       <ThemeProvider theme={secondaryBtn}>
         <Button

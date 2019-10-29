@@ -1,0 +1,68 @@
+@import "../../base.style.scss";
+
+.demo-container .dx-fieldset:first-child {
+  max-width: 80rem;
+  min-width: 50rem;
+}
+
+.dx-dropdownbutton-action.dx-button .dx-button-content {
+  padding: 0 0.5rem;
+}
+
+.dx-dropdownbutton-popup-wrapper
+  .dx-list:not(.dx-list-select-decorator-enabled)
+  .dx-list-item-content {
+  padding: 0 0.5rem;
+}
+
+.dx-dropdownbutton-popup-wrapper .dx-popup-content {
+  padding-top: 1rem;
+}
+
+.dx-button {
+  &-content {
+    border-color: white;
+    border-radius: 0.5rem;
+    background-color: white;
+    border: 2px;
+    height: 3rem;
+
+    img.dx-icon {
+      width: 24px;
+      height: 24px;
+    }
+    .dx-button-text {
+      font-style: $font-primary;
+    }
+  }
+  &group.dx-state-hover {
+    background-color: $color-grey-light;
+  }
+}
+
+.dx-icon {
+  object-fit: cover;
+  border-radius: 15%;
+}
+
+.dx-list-item {
+  &-content {
+    .dx-list-item-icon-container {
+      .dx-list-item-icon {
+        width: 2rem;
+        height: 2rem;
+        vertical-align: middle;
+      }
+    }
+  }
+  &-selected {
+    margin: 1rem 0;
+  }
+  &-selected.dx-state-active {
+    background-color: $color-blue;
+  }
+}
+
+.dx-list-item > .dx-list-item-content {
+  font-style: $font-primary;
+}

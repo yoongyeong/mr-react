@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import data from "../../../data.json";
-import { handleBirthDate, getAge } from "../../../../Helper/Helper";
+import { getDate, getAge } from "../../../../Helper/Helper";
 import { ButtonCustom } from "../../../Subcomponent/Button/Button";
 import Folder from "@material-ui/icons/Folder";
 
 import "./Patient.scss";
 
-const Patient = () => {
+const Patient = props => {
   const patient = data.patient;
 
-  const selectedPatient = 2;
+  const selectedPatient = props.selectedPatient;
 
   let currentPatient;
   patient.map(myPatient => {
@@ -59,7 +59,7 @@ const Patient = () => {
           <div className="bio__data">
             <h6 className="bio__title heading-5">Birthdate</h6>
             <p className="bio__content">
-              {handleBirthDate(new Date(currentPatient.birthDate))}
+              {getDate(new Date(currentPatient.birthDate))}
               <br />
               {getAge(new Date(currentPatient.birthDate))}
             </p>

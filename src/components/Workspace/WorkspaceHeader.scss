@@ -2,7 +2,6 @@
 
 .workspace-header {
   grid-column: 1/-1;
-  margin-bottom: 1rem;
 
   .top {
     margin: 0 1rem 1rem 1rem;
@@ -28,11 +27,35 @@
     }
   }
   .bottom {
-    .workspace-title {
-      display: inline-block;
+    &::after {
+      background-color: $color-grey-darker;
+      height: 1px;
+      margin: 1rem 0 0 0;
+      content: "";
+      display: block;
     }
-    .btn {
+    .workspace-title {
+      display: inline;
+      padding-left: 1.5rem;
+      vertical-align: middle;
+      .title {
+        color: $color-grey-darker;
+        display: inline-block;
+      }
+      .subtitle {
+        color: $color-grey-darker;
+        display: inline-block;
+        &::before {
+          content: "-";
+          margin: 0 1rem;
+        }
+      }
+    }
+    .btn-container {
       float: right;
+      .request-mr {
+        margin-right: 1rem;
+      }
     }
   }
 }

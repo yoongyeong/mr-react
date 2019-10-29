@@ -53,25 +53,50 @@ const ButtonCustom = props => {
 	const priority = props.priority;
 	const size = props.size;
 
-	if (priority == "primary") {
-		return (
-			<ThemeProvider theme={primaryBtn}>
-				<Button variant={variant} className={classes} color="primary" size={size} startIcon={startIcon}>
-					{text}
-				</Button>
-			</ThemeProvider>
-		);
-	} else if (priority == "secondary") {
-		return (
-			<ThemeProvider theme={secondaryBtn}>
-				<Button variant={variant} className={classes} color="primary" size={size} startIcon={startIcon} px={0}>
-					{text}
-				</Button>
-			</ThemeProvider>
-		);
-	} else {
-		return <div>Button priority not specified</div>;
-	}
+  if (priority === "primary") {
+    return (
+      <ThemeProvider theme={primaryBtn}>
+        <Button
+          variant={variant}
+          className={classes}
+          color="primary"
+          size="large"
+          startIcon={startIcon}
+        >
+          {text}
+        </Button>
+      </ThemeProvider>
+    );
+  } else if (priority === "secondary") {
+    return (
+      <ThemeProvider theme={secondaryBtn}>
+        <Button
+          variant={variant}
+          className={classes}
+          color="primary"
+          size="small"
+          startIcon={startIcon}
+          px={0}
+        >
+          {text}
+        </Button>
+      </ThemeProvider>
+    );
+  } else {
+    return (
+      <ThemeProvider theme={primaryBtn}>
+        <Button
+          variant={variant}
+          className={classes}
+          color="primary"
+          size="small"
+          startIcon={startIcon}
+        >
+          {text}
+        </Button>
+      </ThemeProvider>
+    );
+  }
 };
 
 export { ButtonCustom };

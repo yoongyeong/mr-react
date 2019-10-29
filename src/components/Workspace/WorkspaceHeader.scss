@@ -1,8 +1,7 @@
 @import "../base.style.scss";
 
 .workspace-header {
-	grid-column: 1/-1;
-	margin-bottom: 1rem;
+  grid-column: 1/-1;
 
 	.top {
 		margin: 0 1rem 1rem 1rem;
@@ -10,40 +9,53 @@
 			display: inline-block;
 			vertical-align: middle;
 
-			.date {
-				font-family: $font-secondary;
-				font-weight: 700;
-				font-size: 1.4rem;
-			}
-			.time {
-				&::before {
-					content: "|";
-					margin: 0 0.8rem;
-				}
-			}
-		}
-		.breadcrumbs {
-			float: right;
-			margin: auto;
-		}
-	}
-	.bottom {
-		.workspace-title {
-			display: inline-block;
-			margin: 1rem;
-		}
-		&-right {
-			float: right;
-			display: flex;
-
-			.request-mr {
-				display: inline-block;
-				margin-right: 1rem;
-			}
-			.dropdown {
-				background-color: red;
-				float: right;
-			}
-		}
-	}
+      .date {
+        font-family: $font-secondary;
+        font-weight: 700;
+        font-size: 1.4rem;
+      }
+      .time {
+        &::before {
+          content: "|";
+          margin: 0 0.8rem;
+        }
+      }
+    }
+    .breadcrumbs {
+      float: right;
+      margin: auto;
+    }
+  }
+  .bottom {
+    &::after {
+      background-color: $color-grey-darker;
+      height: 1px;
+      margin: 1rem 0 0 0;
+      content: "";
+      display: block;
+    }
+    .workspace-title {
+      display: inline;
+      padding-left: 1.5rem;
+      vertical-align: middle;
+      .title {
+        color: $color-grey-darker;
+        display: inline-block;
+      }
+      .subtitle {
+        color: $color-grey-darker;
+        display: inline-block;
+        &::before {
+          content: "-";
+          margin: 0 1rem;
+        }
+      }
+    }
+    .btn-container {
+      float: right;
+      .request-mr {
+        margin-right: 1rem;
+      }
+    }
+  }
 }

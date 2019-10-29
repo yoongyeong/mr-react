@@ -33,12 +33,6 @@ const secondaryBtn = createMuiTheme({
 			fontWeight: 700
 		}
 	},
-	overrides: {
-		MuiButton: {
-			fontFamily: "Open Sans",
-			fontWeight: 200
-		}
-	},
 	palette: {
 		primary: { 500: "#4285F4" }
 	}
@@ -53,50 +47,31 @@ const ButtonCustom = props => {
 	const priority = props.priority;
 	const size = props.size;
 
-  if (priority === "primary") {
-    return (
-      <ThemeProvider theme={primaryBtn}>
-        <Button
-          variant={variant}
-          className={classes}
-          color="primary"
-          size="large"
-          startIcon={startIcon}
-        >
-          {text}
-        </Button>
-      </ThemeProvider>
-    );
-  } else if (priority === "secondary") {
-    return (
-      <ThemeProvider theme={secondaryBtn}>
-        <Button
-          variant={variant}
-          className={classes}
-          color="primary"
-          size="small"
-          startIcon={startIcon}
-          px={0}
-        >
-          {text}
-        </Button>
-      </ThemeProvider>
-    );
-  } else {
-    return (
-      <ThemeProvider theme={primaryBtn}>
-        <Button
-          variant={variant}
-          className={classes}
-          color="primary"
-          size="small"
-          startIcon={startIcon}
-        >
-          {text}
-        </Button>
-      </ThemeProvider>
-    );
-  }
+	if (priority === "primary") {
+		return (
+			<ThemeProvider theme={primaryBtn}>
+				<Button variant={variant} className={classes} color="primary" size="large" startIcon={startIcon}>
+					{text}
+				</Button>
+			</ThemeProvider>
+		);
+	} else if (priority === "secondary") {
+		return (
+			<ThemeProvider theme={secondaryBtn}>
+				<Button variant={variant} className={classes} color="primary" size="small" startIcon={startIcon} px={0}>
+					{text}
+				</Button>
+			</ThemeProvider>
+		);
+	} else {
+		return (
+			<ThemeProvider theme={primaryBtn}>
+				<Button variant={variant} className={classes} color="primary" size="small" startIcon={startIcon}>
+					{text}
+				</Button>
+			</ThemeProvider>
+		);
+	}
 };
 
 export { ButtonCustom };

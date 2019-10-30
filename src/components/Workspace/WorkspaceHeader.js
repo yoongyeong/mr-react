@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ButtonCustom } from "../Subcomponent/Button/Button";
-import DropDown from "../Subcomponent/DropDown/DropDown";
+// import DropDown from "../Subcomponent/DropDown/DropDown";
 import { getDate } from "../../Helper/Helper";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "@material-ui/core/Link";
@@ -9,6 +9,7 @@ import NavigateBefore from "@material-ui/icons/NavigateBefore";
 import Breadcrumbs from "@material-ui/core/Breadcrumbs";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
+import { SelectBox } from "devextreme-react";
 import Clock from "react-live-clock";
 import "./WorkspaceHeader.scss";
 
@@ -46,22 +47,10 @@ const handleBreadCrumb = event => {
 const WorkspaceHeader = props => {
 	const styles = useStyles();
 	const selectedPatient = props.selectedPatient;
-	const id = props.selectedPatientID;
+	const selectedPatientID = props.selectedPatientID;
 	const handleChoosingMR = props.onPatientChange;
-
-	const patient = props.patientList;
-	let myPatient = props.patientList;
-
-	patient.map(patientList => {
-		myPatient = patientList;
-		myPatient.fullName = [
-			myPatient.honorificTitle,
-			myPatient.firstName,
-			...myPatient.middleName,
-			myPatient.lastName,
-			myPatient.professionalTitle
-		].join(" ");
-	});
+	const patientList = props.patientList;
+	const fullNameList = props.fullNameList;
 
 	return (
 		<div className="workspace-header">
@@ -105,20 +94,7 @@ const WorkspaceHeader = props => {
 							borderRadius: 5
 						}}
 					>
-						<DropDown
-							text={selectedPatient.fullName}
-							icon={selectedPatient[id].image.inUse}
-							items={patient.map(item => {
-								return {
-									id: item.id,
-									name: item.fullName,
-									icon: item.image.inUse
-								};
-							})}
-							displayExpr={"name"}
-							keyExpr={"id"}
-							onItemClick={handleChoosingMR}
-						/>
+						<SelectBox dataSource={fullNameList} defaultValue={fullNameList[0]} />
 					</ButtonBase>
 				</div>
 			</div>

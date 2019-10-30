@@ -12,6 +12,22 @@ const Workspace = props => {
 	const [selectedPatientID, setSelectedPatientID] = useState(1);
 	const [selectedPatient, setSelectedPatient] = useState(data.patient[0]);
 
+	const patient = data.patient;
+	let currentPatient;
+	currentPatient = patient.map(myPatient => {
+		currentPatient = myPatient;
+		currentPatient.fullName = [
+			currentPatient.honorificTitle,
+			currentPatient.firstName,
+			...currentPatient.middleName,
+			currentPatient.lastName,
+			currentPatient.professionalTitle
+		].join(" ");
+		return currentPatient;
+	});
+
+	const fullName = Object.keys(currentPatient).map(i => currentPatient[i].fullName);
+
 	const handleChoosingMR = event => {
 		setSelectedPatientID(event.itemData.id);
 		setSelectedPatient(event.itemData);
@@ -24,6 +40,7 @@ const Workspace = props => {
 				selectedPatient={selectedPatient}
 				onPatientChange={handleChoosingMR}
 				patientList={data.patient}
+				fullNameList={fullName}
 			/>
 			<FormContainer_dx selectedPatientID={selectedPatientID} />
 			<Widgets>

@@ -16,16 +16,14 @@ const FormContainer_dx = props => {
     switch (id) {
       case "1":
         return <CPPT></CPPT>;
-        break;
       case "2":
         return "assessment perawat";
-        break;
       case "3":
         return "assessment dokter";
-        break;
       case "4":
         return "pengkajian tambahan";
-        break;
+      default:
+        return <div>Please check handleComponent() in FormContainer.js</div>;
     }
   };
 

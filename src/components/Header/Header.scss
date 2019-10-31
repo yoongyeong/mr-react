@@ -1,0 +1,61 @@
+@import "../base.style.scss";
+
+.header {
+  display: inline-block;
+  background-color: white;
+  padding: 1rem 0.8rem;
+  z-index: 3;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .header-sticky {
+    position: sticky;
+    top: 0;
+  }
+
+  &--static {
+    .header-logo {
+      display: inline-block;
+
+      img {
+        object-fit: cover;
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+
+    .header-nav {
+      display: inline-flex;
+      float: right;
+      padding: 0.2rem 0;
+
+      .header-btn {
+        margin-right: 1.6rem;
+        height: 4rem;
+        background: none;
+        &:hover {
+          background-color: $color-grey-medium;
+        }
+
+        .icon-svg {
+          margin: 0.8rem 0.8rem;
+          width: 2.5rem;
+          height: 2.5rem;
+          cursor: pointer;
+          fill: $color-grey-darker;
+        }
+      }
+
+      .btn-profile {
+        border-radius: 50%;
+        width: 3.2rem;
+        height: 3.2rem;
+        object-fit: cover;
+        cursor: pointer;
+        margin: 0.4rem 0.4rem;
+      }
+    }
+  }
+}

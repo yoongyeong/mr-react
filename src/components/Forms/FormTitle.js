@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-// // import Wrapper from "../../HOC/wrapper.component";
 import CPPT from "./CPPT/CPPT";
-// // import data from "../data";
 
 import "./FormTitle.scss";
 

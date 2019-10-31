@@ -1,178 +1,182 @@
 {
-	"patient": [
-		{
-			"id": "1",
-			"mrCode": "MR15180272",
-			"image": {
-				"inUse": "https://cdn2.tstatic.net/jambi/foto/bank/images/lisa-blackpink.jpg",
-				"all": [
-					"https://i.redd.it/ei2ocb6v74s31.jpg",
-					"https://i.redd.it/u3b2ptr3x7n11.jpg",
-					"https://i.redd.it/utsxiw1vs2r31.jpg"
-				],
-				"placeHolder": "https://via.placeholder.com/80"
-			},
-			"firstName": "Christina",
-			"middleName": ["Anderson", "Margaritha"],
-			"lastName": "Valentine",
-			"honorificTitle": "Ms.",
-			"academicTitle": null,
-			"professionalTitle": null,
-			"nik": "33-06-12-44-03-91-0302",
-			"npwp": "01.855.081.4-005.000",
-			"bpjs": "0001725722199",
-			"sex": "Female",
-			"birthDate": "1997-03-27T11:44:02+0700",
-			"birthPlace": "Jakarta",
-			"religion": "Christian",
-			"address": {
-				"streetName": "Jalan Jendral Sudirman No.Kav.28",
-				"tower": { "towerName": "Mayapada Tower 1", "floor": 10 },
-				"rt": "4",
-				"rw": "2",
-				"kelurahan": "Karet",
-				"kecamatan": "Setia Budi",
-				"city": "Jakarta Selatan",
-				"province": "DKI Jakarta",
-				"postal": "12920"
-			},
-			"nationality": "Indonesian",
-			"email": ["lisa@blackpink.com"],
-			"phone": ["+62 89 8765 4321", "+62 89 8765 4321"],
-			"isAlive": "True, 1",
-			"maritalStatus": "Not Married",
-			"insurance": ["Prudential Life Insurance", "Astra Life Insurance", "Alianz Life Insurance"]
-		},
-		{
-			"id": "2",
-			"mrCode": "MR15180273",
-			"image": {
-				"inUse": "https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2019/01/16/07a7ab2a-17ce-11e9-8ff8-c80f5203e5c9_image_hires_160333.jpg",
-				"all": [
-					"https://www.wowkeren.com/display/images/photo/2019/07/12/00264127.jpg",
-					"https://cdn2.tstatic.net/kupang/foto/bank/images/member-girl-group-k-pop-blackpink-jennie-1.jpg"
-				],
-				"placeHolder": "https://via.placeholder.com/80"
-			},
-			"firstName": "Jennie",
-			"middleName": [],
-			"lastName": "Kim",
-			"honorificTitle": "Ms.",
-			"academicTitle": null,
-			"professionalTitle": null,
-			"nik": "33-06-12-44-03-91-0323",
-			"npwp": "01.998.081.4-043.000",
-			"bpjs": "0001725722199",
-			"sex": "Female",
-			"birthDate": "1996-01-16T11:44:02+0700",
-			"birthPlace": "Jakarta",
-			"religion": "Christian",
-			"address": {
-				"streetName": "Jalan Jendral Sudirman No.Kav.28",
-				"tower": { "towerName": "Mayapada Tower 1", "floor": 10 },
-				"rt": "4",
-				"rw": "2",
-				"kelurahan": "Karet",
-				"kecamatan": "Setia Budi",
-				"city": "Jakarta Selatan",
-				"province": "DKI Jakarta",
-				"postal": "12920"
-			},
-			"nationality": "Indonesian",
-			"email": ["jenniekim@mail.com", "jennie@blackpink.com"],
-			"phone": ["+62 89 8765 4321", "+62 89 8765 4321"],
-			"isAlive": "True, 1",
-			"maritalStatus": "Not Married",
-			"insurance": ["AXA Mandiri", "Alianz Life Insurance"]
-		}
-	],
-	"formList": [
-		{
-			"id": "1",
-			"title": "CPPT",
-			"info": null,
-			"notification": "(Notifications)",
-			"classExtension": "cppt",
-			"content": "handlerComponent()"
-		},
-		{
-			"id": "2",
-			"title": "Assessment Awal",
-			"info": "Perawat",
-			"notification": "",
-			"classExtension": "perawat",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 2"
-		},
-		{
-			"id": "3",
-			"title": "Assessment Awal",
-			"info": "Dokter",
-			"notification": "",
-			"classExtension": "dokter",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 3"
-		},
-		{
-			"id": "4",
-			"title": "Pengkajian Tambahan 01",
-			"info": null,
-			"notification": "",
-			"classExtension": "tambahan",
-			"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4"
-		}
-	],
+  "patient": [
+    {
+      "id": "1",
+      "mrCode": "MR15180272",
+      "image": {
+        "inUse": "https://cdn2.tstatic.net/jambi/foto/bank/images/lisa-blackpink.jpg",
+        "all": [
+          "https://i.redd.it/ei2ocb6v74s31.jpg",
+          "https://i.redd.it/u3b2ptr3x7n11.jpg",
+          "https://i.redd.it/utsxiw1vs2r31.jpg"
+        ],
+        "placeHolder": "https://via.placeholder.com/80"
+      },
+      "firstName": "Christina",
+      "middleName": ["Anderson", "Margaritha"],
+      "lastName": "Valentine",
+      "honorificTitle": "Ms.",
+      "academicTitle": null,
+      "professionalTitle": null,
+      "nik": "33-06-12-44-03-91-0302",
+      "npwp": "01.855.081.4-005.000",
+      "bpjs": "0001725722199",
+      "sex": "Female",
+      "birthDate": "1997-03-27T11:44:02+0700",
+      "birthPlace": "Jakarta",
+      "religion": "Christian",
+      "address": {
+        "streetName": "Jalan Jendral Sudirman No.Kav.28",
+        "tower": { "towerName": "Mayapada Tower 1", "floor": 10 },
+        "rt": "4",
+        "rw": "2",
+        "kelurahan": "Karet",
+        "kecamatan": "Setia Budi",
+        "city": "Jakarta Selatan",
+        "province": "DKI Jakarta",
+        "postal": "12920"
+      },
+      "nationality": "Indonesian",
+      "email": ["lisa@blackpink.com"],
+      "phone": ["+62 89 8765 4321", "+62 89 8765 4321"],
+      "isAlive": "True, 1",
+      "maritalStatus": "Not Married",
+      "insurance": [
+        "Prudential Life Insurance",
+        "Astra Life Insurance",
+        "Alianz Life Insurance"
+      ]
+    },
+    {
+      "id": "2",
+      "mrCode": "MR15180273",
+      "image": {
+        "inUse": "https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2019/01/16/07a7ab2a-17ce-11e9-8ff8-c80f5203e5c9_image_hires_160333.jpg",
+        "all": [
+          "https://www.wowkeren.com/display/images/photo/2019/07/12/00264127.jpg",
+          "https://cdn2.tstatic.net/kupang/foto/bank/images/member-girl-group-k-pop-blackpink-jennie-1.jpg"
+        ],
+        "placeHolder": "https://via.placeholder.com/80"
+      },
+      "firstName": "Jennie",
+      "middleName": [],
+      "lastName": "Kim",
+      "honorificTitle": "Ms.",
+      "academicTitle": null,
+      "professionalTitle": null,
+      "nik": "33-06-12-44-03-91-0323",
+      "npwp": "01.998.081.4-043.000",
+      "bpjs": "0001725722199",
+      "sex": "Female",
+      "birthDate": "1996-01-16T11:44:02+0700",
+      "birthPlace": "Jakarta",
+      "religion": "Christian",
+      "address": {
+        "streetName": "Jalan Jendral Sudirman No.Kav.28",
+        "tower": { "towerName": "Mayapada Tower 1", "floor": 10 },
+        "rt": "4",
+        "rw": "2",
+        "kelurahan": "Karet",
+        "kecamatan": "Setia Budi",
+        "city": "Jakarta Selatan",
+        "province": "DKI Jakarta",
+        "postal": "12920"
+      },
+      "nationality": "Indonesian",
+      "email": ["jenniekim@mail.com", "jennie@blackpink.com"],
+      "phone": ["+62 89 8765 4321", "+62 89 8765 4321"],
+      "isAlive": "True, 1",
+      "maritalStatus": "Not Married",
+      "insurance": ["AXA Mandiri", "Alianz Life Insurance"]
+    }
+  ],
+  "formList": [
+    {
+      "id": "1",
+      "title": "CPPT",
+      "info": null,
+      "notification": "(Notifications)",
+      "classExtension": "cppt",
+      "content": "handlerComponent()"
+    },
+    {
+      "id": "2",
+      "title": "Assessment Awal",
+      "info": "Perawat",
+      "notification": "",
+      "classExtension": "perawat",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 2"
+    },
+    {
+      "id": "3",
+      "title": "Assessment Awal",
+      "info": "Dokter",
+      "notification": "",
+      "classExtension": "dokter",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 3"
+    },
+    {
+      "id": "4",
+      "title": "Pengkajian Tambahan 01",
+      "info": null,
+      "notification": "",
+      "classExtension": "tambahan",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. 4"
+    }
+  ],
 
-	"cpptContent": [
-		{
-			"id": "1",
-			"name": "Steinarr Flomran",
-			"workTitle": "Licensed Clinical Social Worker",
-			"postingDate": "2019-10-25T09:46:51+0700",
-			"soap": {
-				"subjective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-				"objective": "Faceres tu quidem, Torquate, haec omnia.",
-				"assessment": "Tu autem, si tibi illa probabantur, cur non propriis verbis ea tenebas? Ita multa dicunt, quae vix intellegam. At ego quem huic anteponam non audeo dicere; Ita graviter et severe voluptatem secrevit a bono.",
-				"planning": "Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia."
-			},
-			"verified": "No"
-		},
-		{
-			"id": "2",
-			"name": "dr. Jody Cunningham Sp.KP",
-			"workTitle": "Spesialis Kedokteran Penerbangan",
-			"postingDate": "2019-10-24T17:55:51+0700",
-			"soap": {
-				"subjective": "Tum Torquatus: Prorsus, inquit, assentior.",
-				"objective": "Eadem nunc mea adversum te oratio est.",
-				"assessment": "Portenta haec esse dicit, neque ea ratione ullo modo posse vivi; Duo Reges: constructio interrete.",
-				"planning": "Et hunc idem dico, inquieta sed ad virtutes et ad vitia nihil interesse. Primum cur ista res digna odio est, nisi quod est turpis."
-			},
-			"verified": "No"
-		},
-		{
-			"id": "3",
-			"name": "drg. A. Bachtiar, Sp.BM",
-			"workTitle": "Spesialis Gigi dan Bedah Mulut",
-			"postingDate": "2019-10-23T17:55:51+0700",
-			"soap": {
-				"subjective": "Videamus animi partes, quarum est conspectus illustrior; At enim hic etiam dolore.",
-				"objective": "Erit enim mecum, si tecum erit. Ego vero volo in virtute vim esse quam maximam.",
-				"assessment": "Itaque hic ipse iam pridem est reiectus; Inde sermone vario sex illa a Dipylo stadia confecimus. ",
-				"planning": "Qui enim voluptatem ipsam contemnunt, iis licet dicere se acupenserem maenae non anteponere. Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant."
-			},
-			"verified": "Yes"
-		},
-		{
-			"id": "4",
-			"name": "dr. Harper Johnston Sp.THT-KT",
-			"workTitle": "Spesialis Telinga Hidung Tenggorok-Bedah Kepala Leher",
-			"postingDate": "2019-08-12T08:47:51+0700",
-			"soap": {
-				"subjective": "Quid, si reviviscant Platonis illi et deinceps qui eorum auditores fuerunt, et tecum ita loquantur.",
-				"objective": "Gracchum patrem non beatiorem fuisse quam fillum, cum alter stabilire rem publicam studuerit, alter evertere.",
-				"assessment": "eatus sibi videtur esse moriens.",
-				"planning": "Cato, dicere aliquid vis aut nos iam longiores sumus."
-			},
-			"verified": "No"
-		}
-	]
+  "cpptContent": [
+    {
+      "id": "1",
+      "name": "Steinarr Flomran",
+      "workTitle": "Licensed Clinical Social Worker",
+      "postingDate": "2019-10-25T09:46:51+0700",
+      "soap": {
+        "subjective": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "objective": "Faceres tu quidem, Torquate, haec omnia.",
+        "assessment": "Tu autem, si tibi illa probabantur, cur non propriis verbis ea tenebas? Ita multa dicunt, quae vix intellegam. At ego quem huic anteponam non audeo dicere; Ita graviter et severe voluptatem secrevit a bono.",
+        "planning": "Saepe ab Aristotele, a Theophrasto mirabiliter est laudata per se ipsa rerum scientia."
+      },
+      "verified": "No"
+    },
+    {
+      "id": "2",
+      "name": "dr. Jody Cunningham Sp.KP",
+      "workTitle": "Spesialis Kedokteran Penerbangan",
+      "postingDate": "2019-10-24T17:55:51+0700",
+      "soap": {
+        "subjective": "Tum Torquatus: Prorsus, inquit, assentior.",
+        "objective": "Eadem nunc mea adversum te oratio est.",
+        "assessment": "Portenta haec esse dicit, neque ea ratione ullo modo posse vivi; Duo Reges: constructio interrete.",
+        "planning": "Et hunc idem dico, inquieta sed ad virtutes et ad vitia nihil interesse. Primum cur ista res digna odio est, nisi quod est turpis."
+      },
+      "verified": "No"
+    },
+    {
+      "id": "3",
+      "name": "drg. A. Bachtiar, Sp.BM",
+      "workTitle": "Spesialis Gigi dan Bedah Mulut",
+      "postingDate": "2019-10-23T17:55:51+0700",
+      "soap": {
+        "subjective": "Videamus animi partes, quarum est conspectus illustrior; At enim hic etiam dolore.",
+        "objective": "Erit enim mecum, si tecum erit. Ego vero volo in virtute vim esse quam maximam.",
+        "assessment": "Itaque hic ipse iam pridem est reiectus; Inde sermone vario sex illa a Dipylo stadia confecimus. ",
+        "planning": "Qui enim voluptatem ipsam contemnunt, iis licet dicere se acupenserem maenae non anteponere. Stulti autem malorum memoria torquentur, sapientes bona praeterita grata recordatione renovata delectant."
+      },
+      "verified": "Yes"
+    },
+    {
+      "id": "4",
+      "name": "dr. Harper Johnston Sp.THT-KT",
+      "workTitle": "Spesialis Telinga Hidung Tenggorok-Bedah Kepala Leher",
+      "postingDate": "2019-08-12T08:47:51+0700",
+      "soap": {
+        "subjective": "Quid, si reviviscant Platonis illi et deinceps qui eorum auditores fuerunt, et tecum ita loquantur.",
+        "objective": "Gracchum patrem non beatiorem fuisse quam fillum, cum alter stabilire rem publicam studuerit, alter evertere.",
+        "assessment": "eatus sibi videtur esse moriens.",
+        "planning": "Cato, dicere aliquid vis aut nos iam longiores sumus."
+      },
+      "verified": "No"
+    }
+  ]
 }

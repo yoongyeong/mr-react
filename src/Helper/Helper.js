@@ -1,4 +1,4 @@
-import { format, render, cancel, register } from "timeago.js";
+import { format } from "timeago.js";
 
 let dateOption01 = {
   weekday: "short",
@@ -11,16 +11,11 @@ let dateOption02 = {
   month: "short",
   day: "numeric"
 };
-let dateOption03 = {
-  hours: "numeric",
-  minute: "numeric"
-};
 
 const oneSecond = 1000;
 const oneMinute = 60 * oneSecond;
 const oneHour = 60 * oneMinute;
 const oneDay = 24 * oneHour;
-const oneWeek = 7 * oneDay;
 
 const handlePostingDate = str => {
   let date = new Intl.DateTimeFormat("en-GB", dateOption01);

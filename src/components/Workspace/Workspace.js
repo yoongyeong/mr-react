@@ -3,7 +3,7 @@ import FormContainer_dx from "../FormContainer/FormContainer_dx";
 import Widgets from "../Widget/Widgets";
 import WorkspaceHeader from "./WorkspaceHeader";
 import Patient from "../Widget/MR/Profiles/Patient";
-import NeedAttention from "../Widget/MR/NeedAttention/NeedAttention";
+import NeedAttention from "../NeedAttention/NeedAttention";
 import data from "../data.json";
 
 import "./Workspace.scss";

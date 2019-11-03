@@ -1,0 +1,45 @@
+@import "../../base.style.scss";
+
+.profile-container {
+	padding: 1rem;
+	.section {
+		&--header {
+			.user {
+				&-info {
+					display: inline-block;
+				}
+				&-setting {
+					float: right;
+					.btn-icon {
+						font-size: 2rem;
+					}
+				}
+			}
+			margin-bottom: 1rem;
+		}
+		&--content {
+			margin: 1rem 0.6rem;
+			.title {
+				display: inline-block;
+			}
+			.value {
+				float: right;
+				margin-left: 3rem;
+			}
+			.stats {
+				&--income {
+					margin-top: 0.8rem;
+				}
+			}
+		}
+		&--footer {
+			margin-top: 1.6rem;
+			.cuti {
+				display: inline-block;
+			}
+			.logout {
+				float: right;
+			}
+		}
+	}
+}

@@ -54,7 +54,7 @@
     overflow: hidden;
     position: fixed;
     left: 6rem;
-
+    top: 6.4rem;
     background-color: $color-primary;
     z-index: 97;
 
@@ -74,4 +74,75 @@
       }
     }
   }
+
+  .dx-toolbar {
+    background-color: rgba(191, 191, 191, 0.15);
+    padding: 5px 10px;
+    z-index: 100;
+  }
+
+  .dx-list-item-icon-container,
+  .dx-toolbar-before {
+    width: 36px;
+    padding-right: 0px;
+    text-align: center;
+  }
+
+  .dx-list-item-content {
+    padding-left: 10px;
+  }
+
+  .dx-button {
+    background-color: inherit;
+    border: none;
+  }
+
+  // .panel-list {
+  //   height: 400px;
+  // }
+
+  .dx-drawer-expand.dx-drawer-right .panel-list {
+    float: right;
+  }
+
+  .panel-list .dx-list-item {
+    color: #fff;
+  }
+
+  // .panel-list .dx-list-item .dx-icon {
+  //   color: #fff !important;
+  // }
+
+  // .options {
+  //   padding: 20px;
+  //   background-color: rgba(191, 191, 191, 0.15);
+  // }
+
+  // .caption {
+  //   font-size: 18px;
+  //   font-weight: 500;
+  // }
+
+  // .option {
+  //   margin-top: 10px;
+  //   display: inline-block;
+  //   margin-right: 50px;
+  // }
+
+  // label {
+  //   font-weight: bold;
+  // }
+
+  // #content {
+  //   height: 100%;
+  //   padding: 10px 20px;
+  // }
+
+  // #content h2 {
+  //   font-size: 26px;
+  // }
+}
+
+.dx-theme-accent-as-background-color {
+  background-color: red;
 }

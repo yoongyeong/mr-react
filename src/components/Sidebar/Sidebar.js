@@ -1,55 +1,15 @@
-// import React from "react";
-// import "./Sidebar.scss";
-
-// const Sidebar = () => {
-//   return (
-//     <div className="sidebar">
-//       {/* <div id="sidebar" class="sidebar">
-//         <div class="sidebar-sticky">
-//           <div id="nav-btn" class="nav-btn hamburger hamburger--arrow">
-//             <div class="hamburger-box">
-//               <div class="hamburger-inner"></div>
-//             </div>
-//           </div>
-//           <div class="sidebar__icon">
-//             <div class="icon sidebar--icon fas fa-home"></div>
-//             <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
-//             <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
-//             <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
-//             <div class="icon sidebar--icon fas fa-exclamation-triangle"></div>
-//           </div>
-//         </div>
-//       </div>
-
-//       <div id="sidebar__extension" class="sidebar__extension">
-//         <div class="sidebar__extension--text">
-//           <a href="#" class="link sidebar--link">
-//             Menu 1
-//           </a>
-//           <a href="#" class="link sidebar--link">
-//             Menu 2
-//           </a>
-//           <a href="#" class="link sidebar--link">
-//             Menu 3
-//           </a>
-//           <a href="#" class="link sidebar--link">
-//             Menu 4
-//           </a>
-//           <a href="#" class="link sidebar--link">
-//             Menu 5
-//           </a>
-//         </div>
-// 			</div> */}
-
-//     </div>
-//   );
-// };
-// export default Sidebar;
-
 import React, { useState } from "react";
-import { Drawer, Toolbar, List } from "devextreme-react";
-import { navigation, text } from "./data.js";
+import { Drawer, Toolbar, List, Item } from "devextreme-react";
+import { Modal } from "@material-ui/core";
 import "./Sidebar.scss";
+
+const navigation = [
+  { id: 1, text: "Products" },
+  { id: 2, text: "Sales" },
+  { id: 3, text: "Customers" },
+  { id: 4, text: "Employees" },
+  { id: 5, text: "Reports" }
+];
 
 const NavigationList = () => {
   return (
@@ -69,24 +29,15 @@ const NavigationList = () => {
 
 const SidebarDrawer = props => {
   const opened = props.opened;
+  const setOpened = props.setOpened;
   const classes = props.classes;
-  const [openedStateMode, setOpenedStateMode] = useState("shrink");
-  const [revealMode, setRevealMode] = useState("slide");
-  const [position, setPosition] = useState("left");
-
-  const onRevealModeChanged = ({ value }) => {
-    setRevealMode({ value });
-  };
-  const onPositionChanged = ({ value }) => {
-    setPosition({ value });
-  };
 
   return (
     <Drawer
       opened={opened}
-      openedStateMode={openedStateMode}
-      position={position}
-      revealMode={revealMode}
+      openedStateMode={"shrink"}
+      position={"left"}
+      revealMode={"slide"}
       component={NavigationList}
       closeOnOutsideClick={true}
       height={"100%"}
@@ -96,23 +47,51 @@ const SidebarDrawer = props => {
   );
 };
 
+const ProductInfo = item => {
+  return (
+    <div className={"sidebar-icon"}>
+      <img src={item.ImageSrc} />
+      <div>{item.Name}</div>
+      <div className={"price"}>{currencyFormatter.format(item.Price)}</div>
+    </div>
+  );
+};
+
 const Sidebar = props => {
   const [opened, setOpened] = useState(false);
+  const [isHidden, setIsHidden] = useState(true);
 
-  const toolBarItems = [
-    {
-      widget: "dxButton",
-      location: "before",
-      options: {
-        icon: "menu",
-        onClick: () => setOpened(!opened)
-      }
-    }
-  ];
+  const handleClick = () => {
+    setOpened(!opened);
+    setIsHidden(!isHidden);
+  };
+
   return (
     <div className="sidebar">
-      <Toolbar items={toolBarItems} />
+      {/* <Toolbar items={toolBarItems} /> */}
+      <div
+        id="nav-btn"
+        class={
+          opened
+            ? "nav-btn hamburger hamburger--arrow is-active"
+            : "nav-btn hamburger hamburger--arrow"
+        }
+        onClick={handleClick}
+      >
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+
+      <List
+        dataSource={navigation}
+        hoverStateEnabled={true}
+        activeStateEnabled={true}
+        focusStateEnabled={true}
+      />
+
       <SidebarDrawer classes="drawer" opened={opened} />
+      <div id={"overlay"} hidden={isHidden} onClick={handleClick} />
     </div>
   );
 };

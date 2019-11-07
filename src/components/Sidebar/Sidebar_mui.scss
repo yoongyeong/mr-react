@@ -1,0 +1,265 @@
+@import "../base.style.scss";
+
+#overlay {
+  position: fixed;
+  z-index: -101;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 6rem;
+  right: 0;
+  bottom: 0;
+  // background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar {
+  background-color: $color-primary;
+  grid-column: sidebar-start/sidebar-end;
+  grid-row: 1/-1;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 98;
+  justify-content: center;
+  height: 100vh;
+
+  &-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+  &-icon {
+    color: white;
+    fill: white;
+  }
+
+  .nav-btn {
+    height: 6.4rem;
+  }
+
+  &__icon {
+    display: block;
+
+    text-align: center;
+
+    .icon {
+      display: block;
+      font-size: 3.6rem;
+      cursor: pointer;
+      color: white;
+    }
+  }
+
+  #sidebar__extension {
+    width: 2rem;
+  }
+
+  &__extension {
+    display: block;
+    width: 20rem;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    left: 6rem;
+    top: 0;
+    padding-top: 6.4rem;
+    background-color: $color-primary;
+    z-index: -1;
+
+    &--text {
+      display: inline-block;
+      text-align: left;
+      padding: 1.2rem 0;
+      position: fixed;
+      top: 6.4rem;
+      overflow: hidden;
+
+      .link {
+        display: block;
+        color: white;
+        font-size: 1.6rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  .dx-toolbar {
+    background-color: rgba(191, 191, 191, 0.15);
+    padding: 5px 10px;
+  }
+
+  .dx-list-item-icon-container,
+  .dx-toolbar-before {
+    width: 36px;
+    padding-right: 0px;
+    text-align: center;
+  }
+
+  .dx-list-item-content {
+    padding-left: 10px;
+  }
+
+  .dx-button {
+    background-color: inherit;
+    border: none;
+  }
+
+  // .panel-list {
+  //   height: 400px;
+  // }
+
+  .dx-drawer-expand.dx-drawer-right .panel-list {
+    float: right;
+  }
+
+  .panel-list .dx-list-item {
+    color: #fff;
+  }
+
+  .dx-item {
+    margin: 0;
+    height: 4rem;
+    &.dx-list-item {
+      left: -6.4rem;
+      color: white;
+      &.dx-state-focused {
+        background-color: $color-secondary;
+      }
+      &.dx-state-focused.dx-state-active {
+        background-color: rgba($color: white, $alpha: 0.2);
+      }
+      &.dx-state-hover {
+        background-color: rgba($color: $color-secondary, $alpha: 0.3);
+        color: white;
+      }
+    }
+  }
+}
+
+.dx-theme-accent-as-background-color {
+  background-color: transparent !important;
+  color: white;
+}
+
+// HAMBURGER SETTINGS
+// ==================================================
+$hamburger-padding-x: 1.3rem !default;
+$hamburger-padding-y: 2rem !default;
+$hamburger-layer-width: 3.2rem !default;
+$hamburger-layer-height: 0.4rem !default;
+$hamburger-layer-spacing: 0.6rem !default;
+$hamburger-layer-color: #fff !default;
+$hamburger-layer-border-radius: 0.4rem !default;
+$hamburger-hover-opacity: 1 !default;
+$hamburger-active-layer-color: $hamburger-layer-color !default;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter: opacity(50%) !default;
+$hamburger-active-hover-filter: $hamburger-hover-filter !default;
+
+.hamburger--arrow {
+  &.is-active {
+    // width: 26rem;
+    // transition: transform width 0.3s ease;
+
+    .hamburger-inner {
+      // transform: translateX(20rem);
+      &::before {
+        transform: translate3d($hamburger-layer-width * -0.2, 0, 0)
+          rotate(-45deg) scale(0.7, 1) translateY(0.2rem) translateX(-0.2rem);
+      }
+
+      &::after {
+        transform: translate3d($hamburger-layer-width * -0.2, 0, 0)
+          rotate(45deg) scale(0.7, 1) translateY(-0.15rem) translateX(-0.2rem);
+      }
+    }
+  }
+}
+
+.hamburger {
+  padding: $hamburger-padding-y $hamburger-padding-x;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+
+  transition-property: opacity, filter, width, transform;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+
+  // Normalize (<button>)
+  font: inherit;
+  color: white;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+
+  &:hover {
+    // background-color: rgba($color: $color-secondary, $alpha: 0.3);
+  }
+
+  &.is-active {
+    &:hover {
+      @if $hamburger-hover-use-filter == true {
+        filter: $hamburger-active-hover-filter;
+      } @else {
+        opacity: $hamburger-active-hover-opacity;
+      }
+    }
+
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+      background-color: $hamburger-active-layer-color;
+    }
+  }
+}
+
+.hamburger-box {
+  width: $hamburger-layer-width;
+  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: $hamburger-layer-height / -2;
+
+  &,
+  &::before,
+  &::after {
+    width: $hamburger-layer-width;
+    height: $hamburger-layer-height;
+    background-color: $hamburger-layer-color;
+    border-radius: $hamburger-layer-border-radius;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+  }
+
+  &::before {
+    top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+  }
+
+  &::after {
+    bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+  }
+}

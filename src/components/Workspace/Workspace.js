@@ -30,7 +30,7 @@ const Workspace = props => {
   };
 
   return (
-    <div className="workspace">
+    <div className="workspace" id="workspace">
       <WorkspaceHeader
         onPatientChange={handleChoosingMR}
         fullNameList={patient}
